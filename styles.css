@@ -43,10 +43,10 @@
     left: 0; 
     bottom: 0; 
     background-color: rgb(41, 47, 41); 
-    width: 34%; 
+    width: 100%; 
     color: white; 
     display: flex; 
-    justify-content: center; 
+    justify-content: start; 
     align-items: center; 
     z-index: 1; 
 }
@@ -224,10 +224,18 @@ body::before {
         flex: none; 
         width: 100%; 
     }
+
+    .left {
+        height: 100%;
+    }
     
     .bottom-right {
         flex-direction: column;
-        height: auto; 
+        height: 100%; 
+        position: absolute;
+        top: 0; 
+        width: 40%;
+        justify-content: start;
     }
     
     .modal-content {
@@ -253,14 +261,6 @@ body::before {
         margin: 10px 0; 
     }
 
-    .bottom-right {
-        top: 0; 
-        width: 40%;
-        position: absolute;
-        justify-content: start;
-        height:auto;
-    }
-
     .git-img {
         width: 50px;
         height: 50px;
@@ -274,7 +274,7 @@ body::before {
     }
 
     .intro {
-        padding-top: 35%;
+        justify-content: center;
         padding-right: 2%;
         text-align: right;
         font-size: x-large;
